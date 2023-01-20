@@ -1,4 +1,4 @@
-import { /* useEffect,*/ useState } from 'react' 
+import {  useEffect, useState } from 'react' 
 
 
 import { useOutletContext } from '@remix-run/react'
@@ -27,10 +27,10 @@ function Carrito() {
 
   const { carrito , actualizarcantidad  } = useOutletContext()
 
-  const { total } = useState(0)
+  const { total,setTotal } = useState(0)
 
   
-  /*
+  
   useEffect(() => {
     const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
     setTotal(calcultotal)
@@ -39,7 +39,7 @@ function Carrito() {
       setTotal(calcultotal)
     }
   }, [carrito])
-  */
+  
 
 
   return (
