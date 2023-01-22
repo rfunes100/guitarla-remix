@@ -48,13 +48,13 @@ function Carrito() {
 
   return (
    <main className="contenedor" >
-    <h1 className="heading">arrito de compras</h1>
+    <h1 className="heading">Carrito de compras</h1>
     <div className="contenido">
       <div className='carrito'>
          <h2>Articulos  </h2>
 
-         {carrito.length === 0 ? 'carrito vacio': (
-           carrito.map( producto => (
+         {carrito?.length === 0 ? 'carrito vacio': (
+           carrito?.map( producto => (
             <div key={producto.id} className='producto'>
 
               <div>
