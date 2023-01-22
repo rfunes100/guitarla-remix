@@ -29,18 +29,16 @@ function Carrito() {
 
   const { total,setTotal } = useState(0)
 
-  
-  
   useEffect(() => {
-    const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
-    setTotal(calcultotal)
+    const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
+  setTotal(calcultotala)
     return () => {
       const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
       setTotal(calcultotal)
     }
-  }, [carrito])
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [carrito]  )
   
-
 
   return (
    <main className="contenedor" >
