@@ -1,5 +1,5 @@
-/* eslint-disable react-hooks/exhaustive-deps */
-import {  useEffect, useState } from 'react' 
+
+import {  /*useEffect,*/ useState } from 'react' 
 
 
 import { useOutletContext } from '@remix-run/react'
@@ -26,10 +26,11 @@ export function meta() {
 function Carrito() {
 
 
-  const { total, setTotal } = useState(0)
+  const { total } = useState(0)
   const { carrito , actualizarcantidad  } = useOutletContext()
 
   
+  /*
   useEffect(() => {
   //  const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
   const calcultotala = 15
@@ -43,7 +44,7 @@ function Carrito() {
       setTotal(calcultotala)
     }
   }, [setTotal, carrito]  )
-  
+  */
 
   return (
    <main className="contenedor" >
