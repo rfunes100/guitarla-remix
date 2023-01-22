@@ -27,7 +27,7 @@ function Carrito() {
 
 
   const [ total ,setTotal ] = useState(0)
-  const { carrito , actualizarcantidad  } = useOutletContext()
+  const { carrito , actualizarcantidad , eliminarguitarra  } = useOutletContext()
 
   
   
@@ -88,6 +88,12 @@ function Carrito() {
                 <p className='precio'> $ <span>{producto.precio}</span></p>
                 <p className='subtotal'> Subtotal: $ <span>{producto.cantidad * producto.precio}</span></p>
               </div>
+
+              <button
+               type='button'
+               className='btn_eliminar'
+               onClick={() => eliminarguitarra(producto.id) }
+              >X</button>
 
             </div>
 
