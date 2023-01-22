@@ -26,11 +26,11 @@ export function meta() {
 function Carrito() {
 
 
-  const { total } = useState(1000)
+  const [ total ,setTotal ] = useState(1000)
   const { carrito , actualizarcantidad  } = useOutletContext()
 
   
-  /*
+  
   useEffect(() => {
   //  const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
   const calcultotala = 15
@@ -44,7 +44,7 @@ function Carrito() {
       setTotal(calcultotala)
     }
   }, [setTotal, carrito]  )
-  */
+  
 
   return (
    <main className="contenedor" >
