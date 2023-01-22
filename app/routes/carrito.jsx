@@ -36,8 +36,7 @@ function Carrito() {
       const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
       setTotal(calcultotal)
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [carrito]  )
+  }, [carrito, setTotal]  )
   
 
   return (
