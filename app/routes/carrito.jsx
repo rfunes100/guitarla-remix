@@ -32,7 +32,8 @@ function Carrito() {
   
   useEffect(() => {
     const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
-  setTotal(calcultotala)
+    console.log(calcultotala)
+ /// setTotal(calcultotala)
   //  return () => {
   //    const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
   //    setTotal(calcultotal)
