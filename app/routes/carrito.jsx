@@ -26,7 +26,7 @@ export function meta() {
 function Carrito() {
 
 
-  const { total } = useState(0)
+  const { total } = useState(1000)
   const { carrito , actualizarcantidad  } = useOutletContext()
 
   
