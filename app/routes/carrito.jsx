@@ -31,11 +31,13 @@ function Carrito() {
 
   
   useEffect(() => {
-    const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
+  //  const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
+  const calcultotala = carrito.reduce( (total , producto) =>  (producto.cantidad * producto.precio ), 0 )
     console.log(calcultotala)
  /// setTotal(calcultotala)
     return () => {
-      const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
+    //  const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
+    const calcultotala = carrito.reduce( (total , producto) =>  (producto.cantidad * producto.precio ), 0 )
       console.log(calcultotala)
   //    const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
   //    setTotal(calcultotal)
