@@ -26,19 +26,19 @@ export function meta() {
 function Carrito() {
 
 
-  const [ total ,setTotal ] = useState(1000)
+  const [ total ,setTotal ] = useState(0)
   const { carrito , actualizarcantidad  } = useOutletContext()
 
   
   
   useEffect(() => {
-  //  const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
-  const calcultotala = 15
+    const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
+  //const calcultotala = 15
     console.log('calcultotala',calcultotala)
   setTotal(calcultotala)
     return () => {
-    //  const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
-    const calcultotala = 15
+      const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
+   // const calcultotala = 15
       console.log('calcultotala', calcultotala)
   //    const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
       setTotal(calcultotala)
