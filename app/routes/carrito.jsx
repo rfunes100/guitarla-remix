@@ -1,6 +1,6 @@
 
 import {  useEffect, useState } from 'react' 
-
+import { ClientOnly}  from 'remix-utils'
 
 import { useOutletContext } from '@remix-run/react'
 import styles from '~/styles/carrito.css'
@@ -47,6 +47,11 @@ function Carrito() {
   
 
   return (
+
+    <ClientOnly fallback={`cargando...`}>
+      {() => (
+
+      
    <main className="contenedor" >
     <h1 className="heading">Carrito de compras</h1>
     <div className="contenido">
@@ -113,6 +118,9 @@ function Carrito() {
 
 
    </main>
+   )}
+
+   </ClientOnly>
   )
 }
 
