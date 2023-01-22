@@ -34,10 +34,12 @@ function Carrito() {
     const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
     console.log(calcultotala)
  /// setTotal(calcultotala)
-  //  return () => {
+    return () => {
+      const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
+      console.log(calcultotala)
   //    const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
   //    setTotal(calcultotal)
-  //  }
+    }
   }, [carrito]  )
   
 
