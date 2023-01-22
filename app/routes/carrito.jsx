@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import {  useEffect, useState } from 'react' 
 
 
@@ -25,18 +26,18 @@ export function meta() {
 function Carrito() {
 
 
+  const { total, setTotal } = useState(0)
   const { carrito , actualizarcantidad  } = useOutletContext()
 
-  const { total,setTotal } = useState(0)
-
+  
   useEffect(() => {
     const calcultotala = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
   setTotal(calcultotala)
-    return () => {
-      const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
-      setTotal(calcultotal)
-    }
-  }, [carrito, setTotal]  )
+  //  return () => {
+  //    const calcultotal = carrito.reduce( (total , producto) => total + (producto.cantidad * producto.precio ), 0 )
+  //    setTotal(calcultotal)
+  //  }
+  }, [carrito]  )
   
 
   return (
